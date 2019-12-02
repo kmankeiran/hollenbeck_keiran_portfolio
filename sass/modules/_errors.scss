@@ -1,0 +1,24 @@
+body { 
+    background-color: black;
+    color: white;
+}
+
+.error-section a, .error-home { 
+    color: white !important; 
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.error-home {
+    display: block;
+    width: 102px;
+    background-color: orange;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.error-home:hover {
+    background-color: red;
+    border-radius: 30px;
+    transition: .3s ease;
+}

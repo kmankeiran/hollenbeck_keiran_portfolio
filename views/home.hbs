@@ -1,0 +1,48 @@
+{{!-- <section id="section2" class="panel">panel 2</section> --}}
+<section id="section3" class="panel">
+    <h1 class="user-panel-heading">
+        Welcome to my favourite things!
+    </h1>
+
+    <p>
+       I like a lot of things in life. Although, this webpage will only show what my top 3 favourite things are, I hope you enjoy.
+    </p>
+
+    <h4>Click on a favourite thing below to learn more about it.</h4>
+
+    <div class="team">
+        
+        {{#each people}}
+            <div class="user-panel">
+                <img class="u-avatar" src="images/{{ avatar }}" alt="avatar">
+
+                <a class="u-link" href="{{ ID }}">
+                    See More Info
+                </a>
+
+                <h1>{{ Name }}</h1>
+                <h3>{{ JobTitle }}</h3>
+            </div>
+            
+
+        {{/each}}
+        
+    </div>
+    </div>
+
+    <!-- this will be filled in on the client side when we render our AJAX data -->
+    <section class="lightbox">
+        <span class="close">x</span>
+        <div class="sidebar">
+            <img class="lightBoxImage" src="" alt="larger bio image">
+        </div>
+
+        <div class="lb-content">
+            
+        </div>
+    </section>
+</section>
+<section id="section4" class="panel">
+    <p>Thank you for reading this page on my favourite things, that is all I have to share for today.</p>
+</section>
+{{!-- <section id="section5" class="panel"></section> --}}

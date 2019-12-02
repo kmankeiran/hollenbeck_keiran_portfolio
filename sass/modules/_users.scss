@@ -1,0 +1,47 @@
+.team { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 100px;
+
+    .user-panel {
+        flex: 0 1 200px;
+        text-align: center;
+        padding: 8px;
+
+        .u-avatar { max-width: 200px; }
+
+        .u-link { 
+            display: block; 
+            width: 150px;  
+            text-decoration: none;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+        }
+
+        .u-link:hover {
+            background-color: red;
+            color: black;
+            border-radius: 20px;
+            transition: .3s ease;
+            
+        }
+
+        h1, h3 { margin: 5px 0; }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .team {
+        .user-panel { 
+            flex: 1 1;
+
+            .u-avatar { max-width: 300px; }
+        }
+    }
+}
+
