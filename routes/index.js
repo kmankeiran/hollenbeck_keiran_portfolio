@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
         //console.log(result); // should see objects wrapped in an array
 
         // render the home view with dynamic data
-        res.render('home', { people: result });
+        res.render('home', { portfolio: result });
     })
 })
 // this resolves to localhost:3000/anything (whatever you put after the slash in the location bar)

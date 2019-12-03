@@ -4,6 +4,18 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 100px;
+    
+
+  background : -moz-linear-gradient(96.16% 107.58% 142.91deg,rgba(69, 16, 138, 1) 2.02%,rgba(61, 6, 95, 1) 29.29%,rgba(18, 5, 78, 1) 100%,rgba(16, 5, 77, 1) 100%);
+  background : -webkit-linear-gradient(142.91deg, rgba(69, 16, 138, 1) 2.02%, rgba(61, 6, 95, 1) 29.29%, rgba(18, 5, 78, 1) 100%, rgba(16, 5, 77, 1) 100%);
+  background : -webkit-gradient(linear,96.16% 107.58% ,2.35% -9.43% ,color-stop(0.0202,rgba(69, 16, 138, 1) ),color-stop(0.2929,rgba(61, 6, 95, 1) ),color-stop(1,rgba(18, 5, 78, 1) ),color-stop(1,rgba(16, 5, 77, 1) ));
+  background : -o-linear-gradient(142.91deg, rgba(69, 16, 138, 1) 2.02%, rgba(61, 6, 95, 1) 29.29%, rgba(18, 5, 78, 1) 100%, rgba(16, 5, 77, 1) 100%);
+  background : -ms-linear-gradient(142.91deg, rgba(69, 16, 138, 1) 2.02%, rgba(61, 6, 95, 1) 29.29%, rgba(18, 5, 78, 1) 100%, rgba(16, 5, 77, 1) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#45108A', endColorstr='#10054D' ,GradientType=0)";
+  background : linear-gradient(-52.91deg, rgba(69, 16, 138, 1) 2.02%, rgba(61, 6, 95, 1) 29.29%, rgba(18, 5, 78, 1) 100%, rgba(16, 5, 77, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#45108A',endColorstr='#10054D' , GradientType=1);
+
+
 
     .user-panel {
         flex: 0 1 200px;

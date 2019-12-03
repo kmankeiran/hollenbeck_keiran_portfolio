@@ -19,10 +19,27 @@ h1, h2, h3 { color: $heading-color }
 .panel { min-height: 60vh; }
 
 .panel:nth-child(odd) {
-    background-color: black;
+    // background-color: black;
     color: white;
 }
 
+.main{
+
+  background : -moz-radial-gradient(136.72% 53.83%, circle farthest-side, rgba(87, 97, 215, 1) 0%, rgba(82, 91, 206, 1) 3.11%, rgba(62, 65, 166, 1) 17.63%, rgba(45, 43, 133, 1) 32.63%, rgba(32, 26, 108, 1) 48.03%, rgba(22, 14, 90, 1) 63.97%, rgba(17, 7, 79, 1) 80.79%, rgba(15, 5, 76, 1) 100%);
+  background : -webkit-radial-gradient(136.72% 53.83%, circle farthest-side, rgba(87, 97, 215, 1) 0%, rgba(82, 91, 206, 1) 3.11%, rgba(62, 65, 166, 1) 17.63%, rgba(45, 43, 133, 1) 32.63%, rgba(32, 26, 108, 1) 48.03%, rgba(22, 14, 90, 1) 63.97%, rgba(17, 7, 79, 1) 80.79%, rgba(15, 5, 76, 1) 100%);
+  background : -webkit-gradient(radial,136.72% 53.83% ,0 , 136.72% 53.83%, 317.88 ,color-stop(0,rgba(87, 97, 215, 1) ),color-stop(0.0311,rgba(82, 91, 206, 1) ),color-stop(0.1763,rgba(62, 65, 166, 1) ),color-stop(0.3263,rgba(45, 43, 133, 1) ),color-stop(0.4803,rgba(32, 26, 108, 1) ),color-stop(0.6397,rgba(22, 14, 90, 1) ),color-stop(0.8079,rgba(17, 7, 79, 1) ),color-stop(1,rgba(15, 5, 76, 1) ));
+  background : -o-radial-gradient(136.72% 53.83%, circle farthest-side, rgba(87, 97, 215, 1) 0%, rgba(82, 91, 206, 1) 3.11%, rgba(62, 65, 166, 1) 17.63%, rgba(45, 43, 133, 1) 32.63%, rgba(32, 26, 108, 1) 48.03%, rgba(22, 14, 90, 1) 63.97%, rgba(17, 7, 79, 1) 80.79%, rgba(15, 5, 76, 1) 100%);
+  background : -ms-radial-gradient(136.72% 53.83%, circle farthest-side, rgba(87, 97, 215, 1) 0%, rgba(82, 91, 206, 1) 3.11%, rgba(62, 65, 166, 1) 17.63%, rgba(45, 43, 133, 1) 32.63%, rgba(32, 26, 108, 1) 48.03%, rgba(22, 14, 90, 1) 63.97%, rgba(17, 7, 79, 1) 80.79%, rgba(15, 5, 76, 1) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Stlye=2)";
+  background : radial-gradient(136.72% 53.83%, circle farthest-side, rgba(87, 97, 215, 1) 0%, rgba(82, 91, 206, 1) 3.11%, rgba(62, 65, 166, 1) 17.63%, rgba(45, 43, 133, 1) 32.63%, rgba(32, 26, 108, 1) 48.03%, rgba(22, 14, 90, 1) 63.97%, rgba(17, 7, 79, 1) 80.79%, rgba(15, 5, 76, 1) 100%);
+  opacity : 0.9;
+  filter: alpha(opacity=90) progid:DXImageTransform.Microsoft.Alpha(opacity=90) progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
+}
+
+.panel {
+    background-image: url(../images/portfolio-personal-background.jpg);
+    background-size: cover;
+}
 
 
 #to-top { position: fixed; bottom: 10px; right: 10px; display: none; }
