@@ -1,16 +1,26 @@
 {{!-- <section id="section2" class="panel">panel 2</section> --}}
-<section id="section3" class="panel">
+<section id="section1" class="home">
     <div class="main">
-         <h1 class="user-panel-heading">
-             Welcome to my favourite things!
-         </h1>
+        <nav data-module="nav">
+         <!-- nav elements must have nav-item -->
+            <ul>
+                <li><a href="#" class="nav-item">Home</a></li>
+                <li><a href="#projects" class="nav-item">Projects</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+            </ul>
+        </nav>
+
+        <h1 id="name">Keiran Hollenbeck</h1>
 
         <p>
-         I like a lot of things in life. Although, this webpage will only show what my top 3 favourite things are, I hope you enjoy.
+         Welcome to Keiran’s website. Here, you will get to know Keiran and what projects he works on.
         </p>
 
-        <h4>Click on a favourite thing below to learn more about it.</h4>
+        <button id="projectButton"><a id="projectAnchor" href="#projects">Projects</a></button>
     </div>
+</section>
+<section id="projects">
 
     <div class="team">
         
@@ -30,7 +40,6 @@
         {{/each}}
         
     </div>
-    </div>
 
     <!-- this will be filled in on the client side when we render our AJAX data -->
     <section class="lightbox">
@@ -44,7 +53,15 @@
         </div>
     </section>
 </section>
-<section id="section4" class="panel">
+
+<section id="about" class="panel">
     <p>Thank you for reading this page on my favourite things, that is all I have to share for today.</p>
 </section>
+
+<section id="contact">
+    <p>This is to fill in the Contact page</p>
+</section>
+
+{{!-- If you want to make a button with the gradient color, you have to ....... --}}
+
 {{!-- <section id="section5" class="panel"></section> --}}
