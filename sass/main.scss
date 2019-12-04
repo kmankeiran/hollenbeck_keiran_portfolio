@@ -11,10 +11,10 @@ body {
 }
 
 p {
-    font-size: 20px;
+    font-size: 35px;
 }
 
-h1, h2, h3 { color: $heading-color; font-size: 30px;}
+h1, h2, h3 { color: $heading-color; font-size: 45px;}
 
 .panel { min-height: 100vh; }
 
@@ -46,6 +46,19 @@ h1, h2, h3 { color: $heading-color; font-size: 30px;}
     background-size: cover;
 }
 
+#name {
+    margin-top: 300px;
+    margin-left: 100px;
+}
+
+.main p {
+    width: 400px;
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-bottom: 120px;
+    word-wrap: break-word;
+}
+
 #projects {
   
   background : -moz-linear-gradient(96.16% 107.58% 142.91deg,rgba(69, 16, 138, 1) 2.02%,rgba(61, 6, 95, 1) 29.29%,rgba(18, 5, 78, 1) 100%,rgba(16, 5, 77, 1) 100%);
@@ -64,7 +77,7 @@ h1, h2, h3 { color: $heading-color; font-size: 30px;}
         font-size: 24px;
         text-decoration: none;
         font-family: Arial;
-        color: #fff;
+        color: #fff; 
 }
    
 
@@ -74,13 +87,14 @@ h1, h2, h3 { color: $heading-color; font-size: 30px;}
     width: 200px;
     cursor: pointer;
     margin: 20px;
+    margin-left: 100px;
     height: 55px;
     text-align:center;
     border: none;
     background-size: 300% 100%;
 
     border-radius: 50px;
-    moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -91,7 +105,7 @@ h1, h2, h3 { color: $heading-color; font-size: 30px;}
 
 #projectButton:hover {
     background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -100,6 +114,18 @@ h1, h2, h3 { color: $heading-color; font-size: 30px;}
 #about {
     background-image: url(../images/portfolio-personal-background.jpg);
     background-size: cover;
+}
+
+#aboutDescription p{
+    width: 900px;
+    margin-top: 200px;
+    margin-left: 800px;
+    word-wrap: break-word;
+    line-height: 40pt;
+}
+
+#aboutDescription p a{
+    text-decoration: none;
 }
 
 #contact {
