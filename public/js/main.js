@@ -1,5 +1,23 @@
 // this is a partially revealing module pattern - just a variation on what we've already done
 
+(function(){
+
+    console.log("SEAF Fired");
+    
+    //save shortcut to button in DOM
+    var button = document.querySelector("#button");
+    var burgerCon = document.querySelector("#burgerCon")
+    
+    function hamburgerMenu() {
+        console.log("Clicked Worked")
+        burgerCon.classList.toggle("slideToggle");
+        button.classList.toggle("expanded");
+    }
+    
+    button.addEventListener("click", hamburgerMenu);
+    
+})();
+
 const myVM = (() => {
     // get the user buttons and fire off an async DB query with Fetch
     let userButtons = document.querySelectorAll('.u-link'),

@@ -1,27 +1,80 @@
-#mainNav{
-    font-size: 20px;
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-bottom: 20px;
-    margin-left: 75vw;
-    ul {
-        li { display: inline-block; padding: 10px 10px;}
-    }
-   
-
-    a { text-decoration: none;
-        text-transform: uppercase;
-        color: white;
-        
-    } 
+#mainNav button
+{
+	background: url(../images/burger.svg) center no-repeat;
+	width: 50px;
+	height: 50px;
+	border: 0px;
+	margin-left: auto;
+	margin-bottom: 20px;
+	transition: all .3s linear;
 }
-#mainNav ul li:hover{
-   a {
-    display: block;
-    padding: 10px;
-    border-radius: 20px;
-    background: white;
-    color: black;
-    transition: all .3s ease
-   }
+
+#mainNav button.expanded
+{
+	-webkit-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
+#mainNav
+{
+	display: flex;
+	flex-direction: column;
+}
+
+#mainNav ul li a
+{
+	display: block;
+	padding: 10px;
+	text-align: center;
+	color: white;
+}
+
+#mainNav li
+{
+	border-bottom: 1px solid #efefef;
+}
+
+#mainNav li:first-child
+{
+	border-top: 1px solid #efefef;
+}
+
+#burgerCon
+{
+	display: none;
+}
+
+#burgerCon.slideToggle
+{
+	display: block;
+}
+
+@media screen and (min-width: 965px) {
+    #mainNav{
+        font-size: 20px;
+        padding-top: 30px;
+        padding-left: 10px;
+        padding-bottom: 20px;
+        margin-left: 47vw;
+        ul {
+            li { display: inline-block; padding: 10px 10px;}
+        }
+    
+
+        a { text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            
+        } 
+    }
+    #mainNav ul li:hover{
+        a {
+            display: block;
+            border-radius: 20px;
+            background: white;
+            color: black;
+            transition: all .6s ease
+        }
+    }
 }
