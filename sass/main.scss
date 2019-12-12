@@ -51,11 +51,23 @@ h1, h2, h3 { color: $heading-color; font-size: 45px;}
     background-size: cover;
 }
 
+.main #name {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.main p{
+    text-align: center;
+}
+
 #projectButton
 {
     width: 200px;
+    display: block;
     cursor: pointer;
-    margin: 20px;
+    margin: 20px auto 0 auto;
+    margin-top: 100px;
     height: 55px;
     text-align:center;
     border: none;
@@ -86,7 +98,73 @@ h1, h2, h3 { color: $heading-color; font-size: 45px;}
     color: #fff; 
 }
 
+#aboutDescription p{
+    width: 450px;
+    margin: 100px auto 0 auto;
+    word-wrap: break-word;
+    line-height: 30pt;
+    text-align: center;
+}
+
+#contactForms
+{
+    display: block;
+    text-align: center;
+	flex-direction: column;
+}
+
+#emailForm
+{
+    padding-bottom: 10px;
+	margin-top: 95px;
+    margin-bottom: 10px;
+    width: 390px;
+}
+
+#commentForm
+{
+    padding-bottom: 230px;
+    margin-top: 75px;
+    margin-bottom: 10px;
+    width: 390px;
+}
+
+#securityQuestion
+{
+    padding-bottom: 10px;
+    margin-top: 75px;
+    margin-bottom: 10px;
+    width: 390px;
+}
+
+#submitButton
+{
+	display: block;
+	margin: 10px auto 0 auto;
+	width: 200px;
+	height: 50px;
+	border-radius: 10px;
+	background-color: #8E37D7;
+	color: white;
+    font-family: 'arial';
+    transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+#submitButton:hover {
+    
+    background-color: #667eea;
+    transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
 @media screen and (min-width: 640px) {
+
+
 
 } 
 
@@ -124,6 +202,11 @@ h1, h2, h3 { color: $heading-color; font-size: 45px;}
 	border-top: none;
 }
 
+#projectButton {
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
 #name {
     margin-top: 200px;
     margin-left: 100px;
@@ -143,6 +226,32 @@ h1, h2, h3 { color: $heading-color; font-size: 45px;}
     margin-left: 800px;
     word-wrap: break-word;
     line-height: 40pt;
+    text-align: left;
+}
+
+#contactForms
+{
+	display: flex;
+	flex-direction: column;
+}
+
+#emailForm
+{
+	padding-bottom: 10px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+#commentForm
+{
+	padding-bottom: 80px;
+	margin-bottom: 10px;
+}
+
+#securityQuestion
+{
+	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 }
@@ -161,10 +270,6 @@ h1, h2, h3 { color: $heading-color; font-size: 45px;}
       min-height: 100vh;
   }
 
-#projectButton {
-    margin-left: 100px;
-    margin-bottom: 50px;
-}
 
 #about {
     background-image: url(../images/portfolio-personal-background.jpg);
