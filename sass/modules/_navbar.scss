@@ -50,13 +50,13 @@
 	display: block;
 }
 
-@media screen and (min-width: 965px) {
+@media screen and (min-width: 640px) {
     #mainNav{
         font-size: 20px;
         padding-top: 30px;
         padding-left: 10px;
         padding-bottom: 20px;
-        margin-left: 47vw;
+        margin-left: 20vw;
         ul {
             li { display: inline-block; padding: 10px 10px;}
         }

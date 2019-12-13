@@ -4,6 +4,9 @@
 @import 'modules/_lightbox';
 @import 'modules/_errors';
 
+.hidden {
+    display: none;
+}
 
 body {
     color: $main-color;
@@ -98,12 +101,90 @@ h1, h2, h3 { color: $heading-color; font-size: 45px;}
     color: #fff; 
 }
 
+#portPhoto{
+    display: block;
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+#socialMedia{
+    text-align: center;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#instagram{
+    width: 15%;
+    margin-right: 10px;
+    filter: grayscale(100%);
+    transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+#instagram:hover{
+    filter: grayscale(0%);
+    transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+#gitHub{
+    width: 15%;
+    margin-left: 10px;
+    filter: grayscale(100%);
+    transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+#gitHub:hover{
+    filter: grayscale(0%);
+    transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
 #aboutDescription p{
-    width: 450px;
-    margin: 100px auto 0 auto;
+    width: 320px;
+    margin: 40px auto 0 auto;
+    padding-bottom: 30px;
     word-wrap: break-word;
     line-height: 30pt;
     text-align: center;
+}
+
+#aboutDescription p a{
+    transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+#aboutDescription p a:hover{
+    color: red;
+    transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+#contact h2{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#contact p{
+    text-align: center;
+    padding-top: 30px;
 }
 
 #contactForms
@@ -118,15 +199,15 @@ h1, h2, h3 { color: $heading-color; font-size: 45px;}
     padding-bottom: 10px;
 	margin-top: 95px;
     margin-bottom: 10px;
-    width: 390px;
+    width: 310px;
 }
 
 #commentForm
 {
     padding-bottom: 230px;
-    margin-top: 75px;
+    margin-top: 55px;
     margin-bottom: 10px;
-    width: 390px;
+    width: 310px;
 }
 
 #securityQuestion
@@ -134,13 +215,13 @@ h1, h2, h3 { color: $heading-color; font-size: 45px;}
     padding-bottom: 10px;
     margin-top: 75px;
     margin-bottom: 10px;
-    width: 390px;
+    width: 310px;
 }
 
 #submitButton
 {
 	display: block;
-	margin: 10px auto 0 auto;
+	margin: 60px auto 0 auto;
 	width: 200px;
 	height: 50px;
 	border-radius: 10px;
@@ -162,27 +243,45 @@ h1, h2, h3 { color: $heading-color; font-size: 45px;}
     transition: all .4s ease-in-out;
 }
 
+#homeButton
+{
+    width: 200px;
+    display: block;
+    cursor: pointer;
+    margin: 60px auto 0 auto;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+
+#homeButton:hover {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+#homeAnchor {
+    font-size: 24px;
+    text-decoration: none;
+    font-family: Arial;
+    color: #fff; 
+}
+
 @media screen and (min-width: 640px) {
 
-
-
-} 
-
-
-
-@media screen and (min-width: 965px) {
-
-#logoNav {
-    display: flex;
-    flex-direction: row;
-}
-
-#mainLogo {
-    order: -1;
-    width: 25%;
-}
-
-#burgerCon
+    #burgerCon
 {
 	display: block;
 }
@@ -200,6 +299,49 @@ h1, h2, h3 { color: $heading-color; font-size: 45px;}
 #mainNav li:first-child
 {
 	border-top: none;
+}
+
+#aboutDescription p{
+    width: 570px;
+}
+
+#contact p{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#emailForm{
+    width: 410px;
+}
+
+#commentForm{
+    width: 410px;
+}
+
+#securityQuestion{
+    width: 410px;
+}
+    
+.space{
+    display: none;
+}
+
+
+} 
+
+
+
+@media screen and (min-width: 1024px) {
+
+#logoNav {
+    display: flex;
+    flex-direction: row;
+}
+
+#mainLogo {
+    order: -1;
+    width: 25%;
 }
 
 #projectButton {
