@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     // should really get the user data here and then fetch it thru, but let's try this asynchronously
     console.log('at the main route');
 
-    let query = "SELECT ID, avatar, Name, Logo, FavTitle FROM tbl_card";
+    let query = "SELECT ID, portID, Name, Info, Picture, Video FROM tbl_info";
 
     sql.query(query, (err, result) => {
         if (err) { throw err; console.log(err); }
@@ -23,7 +23,7 @@ router.get('/users/:id', (req, res) =>{
     console.log('hit a dynamic route!');
     console.log(req.params.id);
 
-    let query = `SELECT * FROM tbl_bio WHERE favID="${req.params.id}"`;
+    let query = `SELECT * FROM tbl_info WHERE portID="${req.params.id}"`;
 
     sql.query(query, (err, result) => {
         if (err) { throw err; console.log(err); }
