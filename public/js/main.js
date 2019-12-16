@@ -34,9 +34,9 @@ const myVM = (() => {
             targetImg = lightbox.querySelector('img');
         
         let bioContent = `
-            <p>${person.bio}<p>
-            <h4>Social Media:</h4>
-            ${renderSocialMedia(person.social)}
+            <p>${person.Info}<p>
+            <h4>Link:</h4>
+            <p>${person.Info}<p>
         `;
 
         console.log(bioContent);

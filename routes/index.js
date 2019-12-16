@@ -33,11 +33,11 @@ router.get('/users/:id', (req, res) =>{
         //turn our social property into an array - it's just text in the DB,
         // which isn't really anything we can work with
 
-        result[0].social = result[0].social.split(",").map(function(item) {
-            item = item.trim(); //remove the extra spaces from each word
+        // result[0].social = result[0].social.split(",").map(function(item) {
+        //     item = item.trim(); //remove the extra spaces from each word
 
-            return item;
-        });
+        //     return item;
+        // });
 
         // console.log('after split: ', result[0]);
 
