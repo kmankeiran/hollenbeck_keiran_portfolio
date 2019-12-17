@@ -19,6 +19,8 @@ p {
 
 h1, h2, h3 { color: $heading-color; font-size: 45px;}
 
+h4 {font-size: 30px;}
+
 .panel { min-height: 100vh; }
 
 .panel:nth-child(odd) {
@@ -327,10 +329,7 @@ h1, h2, h3 { color: $heading-color; font-size: 45px;}
     display: none;
 }
 
-
 } 
-
-
 
 @media screen and (min-width: 1024px) {
 
@@ -345,55 +344,83 @@ h1, h2, h3 { color: $heading-color; font-size: 45px;}
 }
 
 #projectButton {
-    margin-left: 100px;
+    margin-left: 140px;
     margin-bottom: 50px;
 }
 
 #name {
     margin-top: 200px;
-    margin-left: 100px;
+    margin-right: 1380px;
 }
 
 .main p {
     width: 400px;
-    margin-top: 40px;
-    margin-left: 100px;
-    margin-bottom: 120px;
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-bottom: 90px;
     word-wrap: break-word;
+}
+
+.flexContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    width:90vw;
+    margin: auto;
+}
+
+.photoContainer{
+    width: 32%;
+}
+
+.descriptionContainer{
+    width: 50%;
+    padding-top: 50px;
+    padding-left: 150px;
+}
+
+#portPhoto{
+    width: 100%;
 }
 
 #aboutDescription p{
     width: 900px;
-    margin-top: 200px;
-    margin-left: 800px;
+    margin-top: 100px;
+    padding-left: 2vw;
     word-wrap: break-word;
     line-height: 40pt;
     text-align: left;
 }
 
-#contactForms
-{
-	display: flex;
-	flex-direction: column;
+#contact p{
+    margin-bottom: 90px;
+}
+
+#contactForms input{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #emailForm
 {
-	padding-bottom: 10px;
-	margin-top: 15px;
+    width: 510px;
+    padding-bottom: 10px;
+	margin-top: 35px;
 	margin-bottom: 10px;
 }
 
 #commentForm
 {
-	padding-bottom: 80px;
-	margin-bottom: 10px;
+	padding-bottom: 140px;
+    margin-bottom: 10px;
+    width: 510px;
 }
 
 #securityQuestion
 {
 	padding-bottom: 10px;
-	margin-bottom: 10px;
+    margin-bottom: 10px;
+    width: 510px;
 }
 
 }

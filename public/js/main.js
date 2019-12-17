@@ -35,8 +35,9 @@ const myVM = (() => {
         
         let bioContent = `
             <p>${person.Info}<p>
+            <hr>
             <h4>Link:</h4>
-            <p>${person.Info}<p>
+            <p>${person.Link}<p>
         `;
 
         console.log(bioContent);
