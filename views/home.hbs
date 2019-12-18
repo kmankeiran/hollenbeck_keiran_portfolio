@@ -83,13 +83,13 @@
     <div id="mainForm">
         <h2 class="hidden">Contact Forms</h2>
 			<form id="contactForms">
-				<input type="email" placeholder="Email Address" required id="emailForm">
+				<input type="email" placeholder="Email Address" required name="email" id="emailForm">
 			
-				<input type="text" placeholder="Input anything you want" id="commentForm">
+				<input type="text" placeholder="Input anything you want" name="comment" id="commentForm" required>
 			
-				<input type="text" placeholder="What does 1 + 1 = ?" required id="securityQuestion">
+				<input type="text" placeholder="Name?" required name="name" id="securityQuestion">
 			</form>
-		<button id="submitButton">Submit</button>
+		<button type="submit" id="submitButton">Submit</button>
     </div>
 
     <button id="homeButton"><a id="homeAnchor" href="#section1">Back to Home</a></button>
