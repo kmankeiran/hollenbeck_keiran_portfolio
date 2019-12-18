@@ -1,1 +1,2 @@
-# hollenbeck_keiran_portfolio
+# Keiran Hollenbeck's Portfolio
+Hello everyone, and welcome to my portfolio. You can download this github folder and install a few functions like Express, NPM, Node, Nodemailer, etc; or, you can go to https://keiran-portfolio.herokuapp.com/ where it is hosted. This website was designed and developed by Keiran Hollenbeck. Keiran's portfolio shows the user many things about Keiran. The projects page shows the user 8 different projects Keiran has worked on, 3D designs and websites. The site does contain an about page talking about Keiran and what he enjoys. 
