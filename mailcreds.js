@@ -1,6 +1,6 @@
 const mailcreds = {
     service: 'gmail',
-    user: 'keiranburner@gmail.com', // your email (gmail) goes here, don't use mine
+    user: 'keiranburner@gmail.com', // your email (gmail) goes here
     pass: 'helloHacker' // see above
 }
 
