@@ -15,18 +15,20 @@ const transporter = mailer.createTransport({
 });
 
 router.get('/', (req, res) => {
-    // should really get the user data here and then fetch it thru, but let's try this asynchronously
     console.log('at the main route');
 
-    let query = "SELECT ID, portID, Name, Info, Picture, Video FROM tbl_info";
+    sql.getConnection((err, connection) => {
+        if (err) { throw err; } // this means we're not connected
 
-    sql.query(query, (err, result) => {
-        if (err) { throw err; console.log(err); }
+        let query = "SELECT ID, portID, Name, Info, Picture, Video FROM tbl_info";
 
-        //console.log(result); // should see objects wrapped in an array
+        connection.query(query, (err, result) => {
+            connection.release();
 
-        // render the home view with dynamic data
-        res.render('home', { portfolio: result });
+            if (err) { throw err }
+
+            res.render('home', { portfolio: result });
+        })
     })
 })
 // this resolves to localhost:3000/anything (whatever you put after the slash in the location bar)
@@ -34,26 +36,21 @@ router.get('/users/:id', (req, res) => {
     console.log('hit a dynamic route!');
     console.log(req.params.id);
 
-    let query = `SELECT * FROM tbl_info WHERE portID="${req.params.id}"`;
 
-    sql.query(query, (err, result) => {
-        if (err) { throw err; console.log(err); }
 
-        console.log(result); // should see objects wrapped in an array
+    sql.getConnection((err, connection) => {
+        if (err) { throw err; } // this means we're not connected
 
-        //turn our social property into an array - it's just text in the DB,
-        // which isn't really anything we can work with
+        let query = `SELECT * FROM tbl_info WHERE portID="${req.params.id}"`;
 
-        // result[0].social = result[0].social.split(",").map(function(item) {
-        //     item = item.trim(); //remove the extra spaces from each word
+        connection.query(query, (err, result) => {
+            connection.release();
 
-        //     return item;
-        // });
+            if (err) { throw err }
 
-        // console.log('after split: ', result[0]);
-
-        // send the DB query back to the browser
-        res.json(result);
+            console.log(result);
+            res.json(result);
+        })
     })
 })
 
@@ -63,11 +60,11 @@ router.post('/mail', (req, res) => {
     console.log('body: ', req.body);
     // get the mail options from the form -> the url params using bodyParser middleware
     const mailOptions = {
-        from: req.body.usermail,
+        from: req.body.email,
         to: auth.user,
-        replyTo: req.body.usermail,
+        replyTo: req.body.email,
         subject: `From portfolio site: Subject = ${req.body.subject || 'none'}`, // Subject line
-        text: req.body.message
+        text: req.body.comment
     };
 
     transporter.sendMail(mailOptions, function (err, info) {
