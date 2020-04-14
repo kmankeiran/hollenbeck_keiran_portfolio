@@ -46,4 +46,51 @@ router.get('/users/:id', (req, res) =>{
 })
 })
 
+router.post('/mail', (req, res) => {
+
+	console.log('hit mail route');
+
+	console.log('body: ', req.body);
+
+
+
+	// get the mail options from the form -> the url params using bodyParser middleware
+
+
+
+	const mailOptions = {
+
+		from: req.body.usermail,
+
+		to: auth.user,
+
+		replyTo: req.body.usermail,
+
+		subject: `From portfolio site: Subject = ${req.body.subject || 'none'}`, // Subject line
+
+		text: req.body.message
+
+	};
+
+
+
+	transporter.sendMail(mailOptions, function (err, info) {
+
+		if (err) {
+
+			console.log("failed... ", err);
+
+			res.json(err);
+
+		} else {
+
+			console.log("success! ", info);
+
+			res.json(info);
+
+		}
+
+	});
+})
+
 module.exports = router;
