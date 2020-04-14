@@ -2,48 +2,48 @@
 <section id="section1" class="home">
     <div class="main">
         <div id="logoNav">
-        <nav data-module="nav" id="mainNav">
-        <!-- nav elements must have nav-item -->
-            <button id="button"></button>
-            <div id="burgerCon">
-                <ul>
-                    <li><a href="#section1" class="nav-item">Home</a></li>
-                    <li><a href="#projects" class="nav-item">Projects</a></li>
-                    <li><a href="#about" class="nav-item">About</a></li>
-                    <li><a href="#contact" class="nav-item">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <img id="mainLogo" src="../images/logo.png">
+            <nav data-module="nav" id="mainNav">
+                <!-- nav elements must have nav-item -->
+                <button id="button"></button>
+                <div id="burgerCon">
+                    <ul>
+                        <li><a href="#section1" class="nav-item">Home</a></li>
+                        <li><a href="#projects" class="nav-item">Projects</a></li>
+                        <li><a href="#about" class="nav-item">About</a></li>
+                        <li><a href="#contact" class="nav-item">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <img id="mainLogo" src="../images/logo.png">
         </div>
 
         <h1 id="name">Keiran Hollenbeck</h1>
 
         <p>
-         Welcome to Keiran’s website. Here, you will get to know Keiran and what projects he works on.
+            Welcome to Keiran’s website. Here, you will get to know Keiran and what projects he works on.
         </p>
-        
+
         <button id="projectButton"><a id="projectAnchor" href="#projects">Projects</a></button>
     </div>
 </section>
 <section id="projects">
 
     <div class="team">
-        
+
         {{#each portfolio}}
-            <div class="user-panel">
-                <img class="u-picture" src="images/{{ Picture }}" alt="picture">
+        <div class="user-panel">
+            <img class="u-picture" src="images/{{ Picture }}" alt="picture">
 
-                <a class="u-link" href="{{ ID }}">
-                    See More Info
-                </a>
+            <a class="u-link" href="{{ ID }}">
+                See More Info
+            </a>
 
-                <h1>{{ Name }}</h1>
-            </div>
-            
+            <h1>{{ Name }}</h1>
+        </div>
+
 
         {{/each}}
-        
+
     </div>
 
     <!-- this will be filled in on the client side when we render our AJAX data -->
@@ -53,8 +53,8 @@
             <img class="lightBoxImage" src="" alt="larger bio image">
         </div>
 
-        <div class="lb-content"> 
-            
+        <div class="lb-content">
+
         </div>
     </section>
 </section>
@@ -66,31 +66,41 @@
         </div>
         <div class="flexItem descriptionContainer">
             <div id="socialMedia">
-                <a href="https://www.instagram.com/keiran_hollenbeck/" target="_blank"><img src="../images/instagram.png" id="instagram"></a>
-                <a href="https://github.com/kmankeiran?tab=repositories" target="_blank"><img src="../images/github-logo.png" id="gitHub"></a>
+                <a href="https://www.instagram.com/keiran_hollenbeck/" target="_blank"><img
+                        src="../images/instagram.png" id="instagram"></a>
+                <a href="https://github.com/kmankeiran?tab=repositories" target="_blank"><img
+                        src="../images/github-logo.png" id="gitHub"></a>
             </div>
-            
-            <p class="descriptionContainer">Hello, My name is Keiran Hollenbeck. I am a 20 year old Developer and 3D Designer in training. <br class="space"><br class="space"> My hobbies include Photography, walking all over London Ont, Coding, and gaming. I enjoy improv and am good at public speaking.<br class="space"><br class="space"> I like working with others, I communicate well, and I have an extrovert personality. <br class="space"><br class="space">If you want to know more about me, feel free to leave me an <a href="#contact">email</a> and we can get to know each other over a coffee or a long walk.</p>
+
+            <p class="descriptionContainer">Hello, My name is Keiran Hollenbeck. I am a 20 year old Developer and 3D
+                Designer in training. <br class="space"><br class="space"> My hobbies include Photography, walking all
+                over London Ont, Coding, and gaming. I enjoy improv and am good at public speaking.<br class="space"><br
+                    class="space"> I like working with others, I communicate well, and I have an extrovert personality.
+                <br class="space"><br class="space">If you want to know more about me, feel free to leave me an <a
+                    href="#contact">email</a> and we can get to know each other over a coffee or a long walk.</p>
         </div>
     </div>
 </section>
 
 <section id="contact">
-    
+
     <h2>I want to get to <br>know you more</h2>
 
-    <p>If you want to know more about me, or you just want to talk about things, feel free to leave me a message and I will get back to you in 2 business days.</p>
+    <p>If you want to know more about me, or you just want to talk about things, feel free to leave me a message and I
+        will get back to you in 2 business days.</p>
 
     <div id="mainForm">
         <h2 class="hidden">Contact Forms</h2>
-			<form id="contactForms">
-				<input type="email" placeholder="Email Address" required name="email" id="emailForm">
-			
-				<input type="text" placeholder="Input anything you want" name="comment" id="commentForm" required>
-			
-				<input type="text" placeholder="Name?" required name="name" id="securityQuestion">
-			</form>
-		<button type="submit" id="submitButton">Submit</button>
+        <form id="contactForms">
+            <input type="email" placeholder="Email Address" required name="email" id="emailForm">
+
+            <input type="text" placeholder="Input anything you want" name="comment" id="commentForm" required>
+
+            <input type="text" placeholder="Name?" required name="name" id="securityQuestion">
+
+            <input type="submit" id="submitButton">Submit</input>
+        </form>
+
     </div>
 
     <button id="homeButton"><a id="homeAnchor" href="#section1">Back to Home</a></button>

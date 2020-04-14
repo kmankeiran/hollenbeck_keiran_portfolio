@@ -8,24 +8,6 @@
 
 // module.exports = config;
 
-
-const mailcreds = {
-
-    service: 'gmail',
-
-    user: 'keiranburner@gmail.com', // your email (gmail) goes here, don't use mine
-
-    pass: 'helloHacker' // see above
-
-}
-
-
-
-module.exports = mailcreds;
-
-
-
-
 const config = {
     host: "us-cdbr-iron-east-01.cleardb.net",
     // port: 3306, // 8889 for mac

@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
+const bodyParser = require('body-parser');
 
 // set the port
 const port = process.env.PORT || 3000;
@@ -8,6 +9,11 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.static(path.join(__dirname, '/public')));
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+// parse application/json
+app.use(bodyParser.json());
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
@@ -23,7 +29,7 @@ app.use((req, res, next) => {
 })
 
 app.use((err, req, res, next) => {
-    res.render('error', { data: err, layout: 'errorPage'});
+    res.render('error', { data: err, layout: 'errorPage' });
 })
 
 app.listen(port, () => {
